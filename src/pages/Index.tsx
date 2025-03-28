@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,9 +7,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const slideImages = [
-  'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-  'https://images.unsplash.com/photo-1518770660439-4636190af475',
-  'https://images.unsplash.com/photo-1461749280684-dccba630e2f6'
+  '/lovable-uploads/32cb859d-295a-4a8b-bbd3-46d53c25c005.png', // Aadhaar logo
+  '/lovable-uploads/aab9d1f7-7554-42b8-b91d-f465ff6dfc00.png', // UPI logo
+  '/lovable-uploads/183c2778-5b3e-4a70-a409-ad49719b27c0.png'  // Digital India logo
 ];
 
 const digitalInitiatives = [

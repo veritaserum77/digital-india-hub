@@ -28,11 +28,16 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 5000 }) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`slide absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+          className={`slide absolute inset-0 h-full w-full transition-opacity duration-1000 flex items-center justify-center bg-darkBg ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        />
+        >
+          <img 
+            src={image} 
+            alt={`Slide ${index + 1}`} 
+            className="max-h-full max-w-full object-contain" 
+          />
+        </div>
       ))}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center">
         {images.map((_, index) => (
@@ -42,6 +47,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 5000 }) => {
               index === currentSlide ? 'bg-orange' : 'bg-gray-400'
             }`}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
