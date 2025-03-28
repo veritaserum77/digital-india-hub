@@ -1,69 +1,62 @@
-# Welcome to your Lovable project
 
-## Project info
+# Digital India Hub
 
-**URL**: https://lovable.dev/projects/1db37668-6fba-4b43-b7ab-c45a7bc623eb
+## Project Overview
 
-## How can I edit this code?
+Digital India Hub is an informative website showcasing the digital advancements of India. The website features a comprehensive overview of various digital initiatives undertaken by the Indian government, including DigiLocker, UPI, Aadhaar, and many more.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Dark Theme**: Modern dark theme with black, grey, and orange color scheme
+- **Responsive Design**: Fully responsive layout that works on all device sizes
+- **Interactive Navigation**: Navigation bar with animated dropdown menu
+- **Animated Statistics**: Count-up animations for key statistics
+- **Digital Initiatives Showcase**: Detailed information about India's digital public infrastructure projects
+- **Social Media Integration**: Sections displaying social media updates related to Digital India
+- **Contact Form**: Interactive contact form for user inquiries
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1db37668-6fba-4b43-b7ab-c45a7bc623eb) and start prompting.
+## Pages
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Home**: Overview of Digital India Hub with slideshow, statistics, and digital initiatives
+- **About**: Information about Digital India Hub and the Digital India programme
+- **Contact**: Contact form and information
+- **Digital Good Pages**: Individual pages for each digital initiative (DigiLocker, UPI, etc.)
 
-**Use your preferred IDE**
+## Technologies Used
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **React**: Frontend library for building the user interface
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **React Router**: For navigation between pages
+- **Lucide Icons**: SVG icon library
+- **Shadcn UI**: Component library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Installation and Setup
 
-Follow these steps:
+Follow these steps to run the project locally:
 
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <repository-url>
+cd <project-directory>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Credits
 
-**Use GitHub Codespaces**
+This project was created to showcase India's digital transformation journey and the various technological initiatives revolutionizing governance and citizen services.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1db37668-6fba-4b43-b7ab-c45a7bc623eb) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+© 2024. All rights reserved by NeGD under MeitY, Government of India.
