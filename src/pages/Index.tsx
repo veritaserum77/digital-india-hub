@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const slideImages = [
-  '/lovable-uploads/32cb859d-295a-4a8b-bbd3-46d53c25c005.png', // Aadhaar logo
-  '/lovable-uploads/aab9d1f7-7554-42b8-b91d-f465ff6dfc00.png', // UPI logo
-  '/lovable-uploads/183c2778-5b3e-4a70-a409-ad49719b27c0.png'  // Digital India logo
+  '/lovable-uploads/0a651d71-5ee8-46d0-ab34-fa308781a0a7.png', // Aadhaar logo
+  '/lovable-uploads/803a2a36-7b58-4321-848d-5513580947d3.png', // UPI logo
+  '/lovable-uploads/04f86c46-48db-4a1a-bd9b-512e72863868.png'  // Digital India logo
 ];
 
 const digitalInitiatives = [
@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
               <div className="md:w-1/2 h-[400px] animate-fade-in">
-                <Slideshow images={slideImages} />
+                <Slideshow images={slideImages} interval={3000} />
               </div>
             </div>
           </div>
