@@ -24,11 +24,13 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 5000 }) => {
   }
 
   return (
-    <div className="slide-container">
+    <div className="slide-container relative h-full w-full overflow-hidden rounded-lg">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`slide ${index === currentSlide ? 'active' : ''}`}
+          className={`slide absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
           style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
       ))}
@@ -36,7 +38,7 @@ const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 5000 }) => {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`mx-1 w-3 h-3 rounded-full ${
+            className={`mx-1 h-3 w-3 rounded-full ${
               index === currentSlide ? 'bg-orange' : 'bg-gray-400'
             }`}
             onClick={() => setCurrentSlide(index)}

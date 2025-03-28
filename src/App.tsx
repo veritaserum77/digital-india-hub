@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DigitalGoodTemplate from "./pages/DigitalGoodTemplate";
 import NotFound from "./pages/NotFound";
+import { useState } from "react";
 
 // List of all digital goods for route generation
 const digitalGoods = [
@@ -19,30 +20,33 @@ const digitalGoods = [
   "vahan-sarathi", "passport", "enam", "kisan-suvidha", "rapdrp"
 ];
 
-const queryClient = new QueryClient();
+const App = () => {
+  // Create QueryClient inside the component
+  const [queryClient] = useState(() => new QueryClient());
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          {/* Dynamic routes for all digital goods */}
-          {digitalGoods.map((good) => (
-            <Route key={good} path={`/${good}`} element={<DigitalGoodTemplate />} />
-          ))}
-          
-          {/* Catch-all route for 404 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            
+            {/* Dynamic routes for all digital goods */}
+            {digitalGoods.map((good) => (
+              <Route key={good} path={`/${good}`} element={<DigitalGoodTemplate />} />
+            ))}
+            
+            {/* Catch-all route for 404 */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
