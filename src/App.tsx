@@ -1,4 +1,5 @@
 
+import React, { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,7 +10,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DigitalGoodTemplate from "./pages/DigitalGoodTemplate";
 import NotFound from "./pages/NotFound";
-import { useState } from "react";
 
 // List of all digital goods for route generation
 const digitalGoods = [
