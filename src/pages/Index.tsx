@@ -97,11 +97,11 @@ const HomePage: React.FC = () => {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero Section */}
+        {/* Hero Section - Updated layout to position slideshow next to content */}
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="animate-slide-in">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="md:w-1/2 animate-slide-in">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
                   India's Digital <span className="text-orange">Awakening</span>
                 </h2>
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
                   Learn More <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
-              <div className="animate-fade-in">
+              <div className="md:w-1/2 h-[400px] animate-fade-in">
                 <Slideshow images={slideImages} />
               </div>
             </div>
